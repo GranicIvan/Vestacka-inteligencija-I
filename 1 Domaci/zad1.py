@@ -24,7 +24,26 @@ Example Output:
 # @param A : integer
 # @return a list of list of integers
 def solve(A):
-    pass
+    
+    lista = [1]*A
+    for i in range(A):
+        lista2 = [1]*(i+1)
+        if i == 1:
+            lista2[i] = 1
+        else:      
+            for j in range(i):
+            
+                if j == 0 :
+                    lista2[j] = 1
+                else:
+                    lista2[j] = lista[i-1][j] + lista[i-1][j-1]                    
+        lista[i] = lista2        
+    return lista
+    
     
 if __name__ == "__main__":
-    print(solve(5))
+    lista = solve(5)
+    #print(lista)
+    print("\n")
+    for x in lista:
+        print(x)
