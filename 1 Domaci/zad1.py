@@ -36,15 +36,14 @@ def solve(A):
                 if j == 0 :
                     lista2[j] = 1
                 else:
-                    lista2[j] = lista[i-1][j] + lista[i-1][j-1]
-                    print("lista[i-1][j]:", str(lista[i-1][j]), ", lista[i-1][j-1]: ", str(lista[i-1][j-1]))
+                    lista2[j] = lista[i-1][j] + lista[i-1][j-1]                    
         lista[i] = lista2        
     return lista
     
     
 if __name__ == "__main__":
     lista = solve(5)
-    print(lista)
+    #print(lista)
     print("\n")
     for x in lista:
         print(x)
